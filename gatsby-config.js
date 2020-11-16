@@ -13,6 +13,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-source-notionso',
+      options: {
+        name: "Blog",
+        rootPageUrl: "https://www.notion.so/Blog-a8a0148897c244c49ee5e4a0569a5506",
+        debug: false,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
@@ -74,4 +82,5 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
+  pathPrefix: "/"
 }
